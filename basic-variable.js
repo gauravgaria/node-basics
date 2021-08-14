@@ -32,3 +32,20 @@ const person = {
 console.log("objects -> " + person.name);
 
 person.showName();
+
+/**
+ *      Arrays
+ */
+
+const items = ["laptops", "desktops", "mouse", "bagpack"];
+
+items.push("games"); //Note: "const" array is not being changed here, only the pointing address is changed
+
+// let item -> declaration || 'items' array assigned to item variable each time.
+
+for (let item of items) {
+  console.log(item);
+}
+
+//array.map((var) => print var)
+console.log(items.map((item) => "items -> " + item));
