@@ -40,6 +40,14 @@ person.showName();
 const items = ["laptops", "desktops", "mouse", "bagpack"];
 
 items.push("games"); //Note: "const" array is not being changed here, only the pointing address is changed
+items[3] = "keyboard"; // this is only point to address not to the whole array.
+
+items = ["hi", "hello"]; // this cannot be done -> reassignment of array.
+
+/**    NOTE: same goes for the objects also -> const obj = {name:'gaurav'}
+ *                                             obj = {name:'Nimesh'} -> error
+ *                                             obj.name = "Nimesh" -> no error -> points to the address
+ */
 
 // let item -> declaration || 'items' array assigned to item variable each time.
 
