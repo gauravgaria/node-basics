@@ -7,7 +7,7 @@ const name = "Gaurav";
 let age = 28;
 let hasBike = false;
 
-// name = "Nimesh"; //this will show an error(assignment to a constant variable)
+//--> name = "Nimesh"; //this will show an error(assignment to a constant variable)
 
 function userInfo(userName, userAge, userBike) {
   return "name is " + userName + " " + userAge + " " + userBike;
@@ -42,7 +42,7 @@ const items = ["laptops", "desktops", "mouse", "bagpack"];
 items.push("games"); //Note: "const" array is not being changed here, only the pointing address is changed
 items[3] = "keyboard"; // this is only point to address not to the whole array.
 
-items = ["hi", "hello"]; // this cannot be done -> reassignment of array.
+// --> items = ["hi", "hello"]; // this cannot be done -> reassignment of array.
 
 /**    NOTE: same goes for the objects also -> const obj = {name:'gaurav'}
  *                                             obj = {name:'Nimesh'} -> error
@@ -57,3 +57,27 @@ for (let item of items) {
 
 //array.map((var) => print var)
 console.log(items.map((item) => "items -> " + item));
+
+/*
+ *      Spread operator (...x)
+ */
+
+const newArray = [...items]; // copies the elements to the new array one by one
+
+//const newArray = [items]; // wrong -> will show array of arrays
+
+console.log(newArray);
+
+/*    Spread vs Rest operator
+      spread -> basically adds/spreads another array in it || same goes for objects
+
+ */
+
+const arr = [1, 2, 3];
+const arr1 = [...arr, 4, 5];
+
+let obj1 = { name: "gary", age: 21 };
+let obj2 = { ...obj1, bike: true };
+
+console.log(arr1);
+console.log(obj2);
