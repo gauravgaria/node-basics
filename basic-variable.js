@@ -81,3 +81,26 @@ let obj2 = { ...obj1, bike: true };
 
 console.log(arr1);
 console.log(obj2);
+
+//--> Array destructuring
+
+const newArray1 = ["a", "b", "c"];
+
+// traditional approach -> let top1 = newArray[0]
+let [top1, top2, top3] = newArray1;
+
+console.log("destructuring-> " + top1 + " " + top2);
+
+// --> Objects destructuring
+
+const newObj = {
+  username: "gary",
+  userage: 28,
+  bike: false,
+};
+
+console.log("traditional approach-> " + newObj.username);
+
+let { username, userage, bike } = newObj;
+
+console.log("destructuring-> " + username + " " + userage);
